@@ -1,0 +1,12 @@
+<div class="product-card" (click)="childSelected()">
+  <img
+    src="{{ innerProduct?.image }}"
+    alt="Adidas X Pop Polo Shirt"
+    class="product-image"
+  />
+  <div class="product-details">
+    <p class="category">{{ innerProduct?.size }}</p>
+    <h2 class="product-title">{{ innerProduct?.name }}</h2>
+    <p class="product-price">{{ innerProduct?.price }}</p>
+  </div>
+</div>

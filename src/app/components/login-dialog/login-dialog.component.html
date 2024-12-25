@@ -1,0 +1,19 @@
+<div class="backdrop"></div>
+<dialog open>
+  <h2>Login</h2>
+
+  <p>
+    <label for="username">Username</label>
+    <input type="text" [(ngModel)]="enteredUsername" name="username" />
+  </p>
+
+  <p>
+    <label for="password">Password</label>
+    <input type="password" [(ngModel)]="enteredPassword" name="password" />
+  </p>
+
+  <p class="actions">
+    <button type="button" (click)="cancelDialog()">Cancel</button>
+    <button type="submit" (click)="login()">Login</button>
+  </p>
+</dialog>

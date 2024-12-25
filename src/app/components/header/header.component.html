@@ -1,0 +1,31 @@
+<header class="header">
+  <div class="container">
+    <div class="inner-header">
+      <div class="logo">SOBER</div>
+      <nav class="nav">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./products.html">Products</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="search-cart">
+        <a href="#">Search</a>
+        <a href="#">Cart</a>
+        @if (isLogged) {
+        {{ username }}
+        } @else {
+        <button (click)="openDialog()" class="login-btn">Login</button>
+        }
+      </div>
+    </div>
+  </div>
+</header>
+
+@if (isDialogOpen) {
+<app-login-dialog
+  (cancel)="onCancel($event)"
+  (onLogin)="checkAuth($event)"
+></app-login-dialog>
+}

@@ -1,0 +1,21 @@
+<div class="product-grid">
+  @if (prods.length > 0) { @for (product of prods; track $index) {
+  <app-product
+    [innerProduct]="product"
+    (innerSelected)="selectProduct($event)"
+  ></app-product>
+  } } @else { Уншиж та түр хүлээнэ үү ... }
+</div>
+
+@if (isClicked) {
+<div class="product-detail-section">
+  <div class="product-image-section">
+    <img
+      src="{{ selected.image }}"
+      alt="Adidas X Pop Polo Shirt"
+      class="product-image"
+    />
+  </div>
+  <div class="product-info-section">{{ selected.name }}</div>
+</div>
+}
